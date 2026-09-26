@@ -153,17 +153,22 @@
 
   /* ---------- 发音播放 ---------- */
   [data-audio]{cursor:pointer;}
+  :root{
+    --spk-url:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232563eb' d='M3 9v6h4l5 4V5L7 9H3z'/%3E%3Cpath fill='none' stroke='%232563eb' stroke-width='2.2' stroke-linecap='round' d='M15.5 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12'/%3E%3C/svg%3E");
+    --spk-url-on:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M3 9v6h4l5 4V5L7 9H3z'/%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' d='M15.5 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12'/%3E%3C/svg%3E");
+  }
   .spk{border-bottom:1px dotted var(--brand);border-radius:3px;padding:0 2px;}
-  .spk::after{content:"\1F50A";font-size:.8em;margin-left:.28em;opacity:.5;}
+  .spk::after{content:"";display:inline-block;width:.85em;height:.85em;margin-left:.25em;vertical-align:-.05em;opacity:.65;background:var(--spk-url) center/contain no-repeat;}
   .spk:hover{background:var(--hl);}
   .spk.on{background:var(--brand);color:#fff;border-bottom-color:transparent;}
-  .spk.on::after{opacity:1;}
+  .spk.on::after{opacity:1;background-image:var(--spk-url-on);}
   .ltr[data-audio]{transition:background .15s,color .15s;}
   .ltr[data-audio]:hover{background:var(--hl);}
-  .ltr[data-audio]::after{content:"\1F50A";float:right;font-size:12px;opacity:.5;margin-top:4px;}
+  .ltr[data-audio]::after{content:"";float:right;width:13px;height:13px;opacity:.55;margin-top:4px;background:var(--spk-url) center/contain no-repeat;}
+  .ltr[data-audio]:hover::after{opacity:1;}
   .ltr[data-audio].on{background:var(--brand);border-color:var(--brand);}
   .ltr[data-audio].on .L,.ltr[data-audio].on .N,.ltr[data-audio].on .S{color:#fff;}
-  .ltr[data-audio].on::after{opacity:1;}
+  .ltr[data-audio].on::after{opacity:1;background-image:var(--spk-url-on);}
   .audio-note{font-size:13px;color:var(--ink-3);margin:8px 0 12px;}
   .audio-note b{color:var(--brand);}
 
@@ -226,32 +231,32 @@
 
   <h3>1.1 基础 26 字母（含名称与发音要点）</h3>
   <div class="alpha">
-    <div class="ltrNone" data-audio="a" title="点击播放发音"><div class="L">A a</div><div class="N">[aː]</div><div class="S">啊（长音）</div></div>
-    <div class="ltrNone" data-audio="b" title="点击播放发音"><div class="L">B b</div><div class="N">[beː]</div><div class="S">词尾读 [p]</div></div>
-    <div class="ltrNone" data-audio="c" title="点击播放发音"><div class="L">C c</div><div class="N">[tseː]</div><div class="S">多见于外来词</div></div>
-    <div class="ltrNone" data-audio="d" title="点击播放发音"><div class="L">D d</div><div class="N">[deː]</div><div class="S">词尾读 [t]</div></div>
-    <div class="ltrNone" data-audio="e" title="点击播放发音"><div class="L">E e</div><div class="N">[eː]</div><div class="S">词尾 -e 读 [ə]</div></div>
-    <div class="ltrNone" data-audio="f" title="点击播放发音"><div class="L">F f</div><div class="N">[ɛf]</div><div class="S">同英语 f</div></div>
-    <div class="ltrNone" data-audio="g" title="点击播放发音"><div class="L">G g</div><div class="N">[geː]</div><div class="S">始终硬音（go）</div></div>
-    <div class="ltrNone" data-audio="h" title="点击播放发音"><div class="L">H h</div><div class="N">[haː]</div><div class="S">元音后不发音</div></div>
-    <div class="ltrNone" data-audio="i" title="点击播放发音"><div class="L">I i</div><div class="N">[iː]</div><div class="S">衣（长音）</div></div>
-    <div class="ltrNone" data-audio="j" title="点击播放发音"><div class="L">J j</div><div class="N">[jɔt]</div><div class="S">读英语 y（ja）</div></div>
-    <div class="ltrNone" data-audio="k" title="点击播放发音"><div class="L">K k</div><div class="N">[kaː]</div><div class="S">同英语 k</div></div>
-    <div class="ltrNone" data-audio="l" title="点击播放发音"><div class="L">L l</div><div class="N">[ɛl]</div><div class="S">舌尖抵上颚</div></div>
-    <div class="ltrNone" data-audio="m" title="点击播放发音"><div class="L">M m</div><div class="N">[ɛm]</div><div class="S">同英语 m</div></div>
-    <div class="ltrNone" data-audio="n" title="点击播放发音"><div class="L">N n</div><div class="N">[ɛn]</div><div class="S">同英语 n</div></div>
-    <div class="ltrNone" data-audio="o" title="点击播放发音"><div class="L">O o</div><div class="N">[oː]</div><div class="S">哦（圆唇）</div></div>
-    <div class="ltrNone" data-audio="p" title="点击播放发音"><div class="L">P p</div><div class="N">[peː]</div><div class="S">同英语 p</div></div>
-    <div class="ltrNone" data-audio="q" title="点击播放发音"><div class="L">Q q</div><div class="N">[kuː]</div><div class="S">qu = [kv]</div></div>
-    <div class="ltrNone" data-audio="r" title="点击播放发音"><div class="L">R r</div><div class="N">[ɛʁ]</div><div class="S">小舌音/颤音</div></div>
-    <div class="ltrNone" data-audio="s" title="点击播放发音"><div class="L">S s</div><div class="N">[ɛs]</div><div class="S">元音前读 [z]</div></div>
-    <div class="ltrNone" data-audio="t" title="点击播放发音"><div class="L">T t</div><div class="N">[teː]</div><div class="S">同英语 t</div></div>
-    <div class="ltrNone" data-audio="u" title="点击播放发音"><div class="L">U u</div><div class="N">[uː]</div><div class="S">乌（圆唇）</div></div>
-    <div class="ltrNone" data-audio="v" title="点击播放发音"><div class="L">V v</div><div class="N">[faʊ]</div><div class="S">德语词读 [f]</div></div>
-    <div class="ltrNone" data-audio="w" title="点击播放发音"><div class="L">W w</div><div class="N">[veː]</div><div class="S">读英语 v</div></div>
-    <div class="ltrNone" data-audio="x" title="点击播放发音"><div class="L">X x</div><div class="N">[ɪks]</div><div class="S">= [ks]</div></div>
-    <div class="ltrNone" data-audio="y" title="点击播放发音"><div class="L">Y y</div><div class="N">[ʏpsilɔn]</div><div class="S">读同 ü</div></div>
-    <div class="ltrNone" data-audio="z" title="点击播放发音"><div class="L">Z z</div><div class="N">[tsɛt]</div><div class="S">永远读 [ts]</div></div>
+    <div class="ltr" data-audio="a" title="点击播放发音"><div class="L">A a</div><div class="N">[aː]</div><div class="S">啊（长音）</div></div>
+    <div class="ltr" data-audio="b" title="点击播放发音"><div class="L">B b</div><div class="N">[beː]</div><div class="S">词尾读 [p]</div></div>
+    <div class="ltr" data-audio="c" title="点击播放发音"><div class="L">C c</div><div class="N">[tseː]</div><div class="S">多见于外来词</div></div>
+    <div class="ltr" data-audio="d" title="点击播放发音"><div class="L">D d</div><div class="N">[deː]</div><div class="S">词尾读 [t]</div></div>
+    <div class="ltr" data-audio="e" title="点击播放发音"><div class="L">E e</div><div class="N">[eː]</div><div class="S">词尾 -e 读 [ə]</div></div>
+    <div class="ltr" data-audio="f" title="点击播放发音"><div class="L">F f</div><div class="N">[ɛf]</div><div class="S">同英语 f</div></div>
+    <div class="ltr" data-audio="g" title="点击播放发音"><div class="L">G g</div><div class="N">[geː]</div><div class="S">始终硬音（go）</div></div>
+    <div class="ltr" data-audio="h" title="点击播放发音"><div class="L">H h</div><div class="N">[haː]</div><div class="S">元音后不发音</div></div>
+    <div class="ltr" data-audio="i" title="点击播放发音"><div class="L">I i</div><div class="N">[iː]</div><div class="S">衣（长音）</div></div>
+    <div class="ltr" data-audio="j" title="点击播放发音"><div class="L">J j</div><div class="N">[jɔt]</div><div class="S">读英语 y（ja）</div></div>
+    <div class="ltr" data-audio="k" title="点击播放发音"><div class="L">K k</div><div class="N">[kaː]</div><div class="S">同英语 k</div></div>
+    <div class="ltr" data-audio="l" title="点击播放发音"><div class="L">L l</div><div class="N">[ɛl]</div><div class="S">舌尖抵上颚</div></div>
+    <div class="ltr" data-audio="m" title="点击播放发音"><div class="L">M m</div><div class="N">[ɛm]</div><div class="S">同英语 m</div></div>
+    <div class="ltr" data-audio="n" title="点击播放发音"><div class="L">N n</div><div class="N">[ɛn]</div><div class="S">同英语 n</div></div>
+    <div class="ltr" data-audio="o" title="点击播放发音"><div class="L">O o</div><div class="N">[oː]</div><div class="S">哦（圆唇）</div></div>
+    <div class="ltr" data-audio="p" title="点击播放发音"><div class="L">P p</div><div class="N">[peː]</div><div class="S">同英语 p</div></div>
+    <div class="ltr" data-audio="q" title="点击播放发音"><div class="L">Q q</div><div class="N">[kuː]</div><div class="S">qu = [kv]</div></div>
+    <div class="ltr" data-audio="r" title="点击播放发音"><div class="L">R r</div><div class="N">[ɛʁ]</div><div class="S">小舌音/颤音</div></div>
+    <div class="ltr" data-audio="s" title="点击播放发音"><div class="L">S s</div><div class="N">[ɛs]</div><div class="S">元音前读 [z]</div></div>
+    <div class="ltr" data-audio="t" title="点击播放发音"><div class="L">T t</div><div class="N">[teː]</div><div class="S">同英语 t</div></div>
+    <div class="ltr" data-audio="u" title="点击播放发音"><div class="L">U u</div><div class="N">[uː]</div><div class="S">乌（圆唇）</div></div>
+    <div class="ltr" data-audio="v" title="点击播放发音"><div class="L">V v</div><div class="N">[faʊ]</div><div class="S">德语词读 [f]</div></div>
+    <div class="ltr" data-audio="w" title="点击播放发音"><div class="L">W w</div><div class="N">[veː]</div><div class="S">读英语 v</div></div>
+    <div class="ltr" data-audio="x" title="点击播放发音"><div class="L">X x</div><div class="N">[ɪks]</div><div class="S">= [ks]</div></div>
+    <div class="ltr" data-audio="y" title="点击播放发音"><div class="L">Y y</div><div class="N">[ʏpsilɔn]</div><div class="S">读同 ü</div></div>
+    <div class="ltr" data-audio="z" title="点击播放发音"><div class="L">Z z</div><div class="N">[tsɛt]</div><div class="S">永远读 [ts]</div></div>
   </div>
 
   <h3>1.2 四个特殊字母</h3>
