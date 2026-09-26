@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德语初学者核心知识手册</title>
+<meta name="description" content="德语 A1–A2 核心知识：字母与发音、W-疑问词、冠词四格、单复数变化、形容词词尾、动词变位。">
+<meta name="theme-color" content="#1f4e79">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="德语手册">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f4e79'/%3E%3Ctext x='32' y='44' font-size='34' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%23fff'%3ED%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --card:#ffffff;
+    --ink:#1b1f24;
+    --ink-2:#4a5568;
+    --ink-3:#718096;
+    --line:#e2e6ec;
+    --brand:#1f4e79;
+    --brand-soft:#eaf1f8;
+    --masc:#2563eb;      /* 阳性 der */
+    --fem:#dc2626;       /* 阴性 die */
+    --neut:#16a34a;      /* 中性 das */
+    --pl:#7c3aed;        /* 复数 die */
+    --warn:#b45309;
+    --warn-bg:#fff7ed;
+    --tip:#0f766e;
+    --tip-bg:#f0fdfa;
+    --hl:#fef3c7;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+    font-size:15px;
+    line-height:1.7;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px;}
+
+  /* ---------- 封面 ---------- */
+  header.hero{
+    background:linear-gradient(135deg,#1f4e79 0%,#2c6ca8 100%);
+    color:#fff;padding:44px 20px 38px;margin-bottom:26px;
+  }
+  .hero-inner{max-width:1080px;margin:0 auto;}
+  .hero .kicker{font-size:13px;letter-spacing:2px;opacity:.85;text-transform:uppercase;}
+  .hero h1{margin:8px 0 6px;font-size:30px;font-weight:700;letter-spacing:.5px;}
+  .hero p{margin:0;opacity:.92;font-size:14.5px;max-width:760px;}
+  .hero .meta{margin-top:16px;font-size:13px;opacity:.85;}
+  .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+    padding:4px 11px;border-radius:20px;font-size:12.5px;}
+
+  /* ---------- 导航 ---------- */
+  nav.toc{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;margin-bottom:26px;
+  }
+  nav.toc .toc-title{font-size:13px;color:var(--ink-3);margin-bottom:10px;letter-spacing:1px;}
+  nav.toc ol{margin:0;padding:0;list-style:none;display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 18px;}
+  nav.toc a{color:var(--brand);text-decoration:none;font-size:14px;}
+  nav.toc a:hover{text-decoration:underline;}
+  nav.toc .num{color:var(--ink-3);font-variant-numeric:tabular-nums;margin-right:6px;}
+
+  /* ---------- 章节 ---------- */
+  section{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:26px 28px;margin-bottom:22px;
+  }
+  section > h2{
+    margin:0 0 4px;font-size:21px;color:var(--brand);
+    display:flex;align-items:baseline;gap:10px;
+  }
+  section > h2 .idx{
+    font-size:13px;color:#fff;background:var(--brand);
+    border-radius:6px;padding:2px 8px;font-weight:600;
+  }
+  section > .sub{color:var(--ink-3);font-size:13.5px;margin:0 0 18px;}
+  h3{font-size:16.5px;margin:26px 0 10px;color:var(--ink);
+     border-left:4px solid var(--brand);padding-left:10px;}
+  h4{font-size:14.5px;margin:18px 0 8px;color:var(--ink-2);}
+  p{margin:8px 0;}
+
+  /* ---------- 表格 ---------- */
+  .tbl-scroll{overflow-x:auto;margin:10px 0;}
+  table{border-collapse:collapse;width:100%;font-size:14px;background:#fff;}
+  caption{caption-side:top;text-align:left;font-size:13px;color:var(--ink-3);
+    padding-bottom:6px;}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;}
+  thead th{background:#f0f3f7;font-weight:600;color:var(--ink-2);font-size:13.5px;}
+  tbody tr:nth-child(even){background:#fafbfc;}
+  td.c,th.c{text-align:center;}
+  .de{font-weight:600;letter-spacing:.2px;}
+  .ipa{font-family:"Times New Roman",Georgia,serif;color:var(--ink-3);font-size:13px;}
+
+  /* 性别配色 */
+  .m{color:var(--masc);font-weight:600;}
+  .f{color:var(--fem);font-weight:600;}
+  .n{color:var(--neut);font-weight:600;}
+  .p{color:var(--pl);font-weight:600;}
+  .badge{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:4px;
+    color:#fff;font-weight:600;line-height:1.6;}
+  .badge.m{background:var(--masc);}
+  .badge.f{background:var(--fem);}
+  .badge.n{background:var(--neut);}
+  .badge.p{background:var(--pl);}
+  th.m,th.f,th.n,th.p{color:#fff;}
+  th.m{background:var(--masc);}
+  th.f{background:var(--fem);}
+  th.n{background:var(--neut);}
+  th.p{background:var(--pl);}
+
+  /* ---------- 提示框 ---------- */
+  .box{border-radius:10px;padding:12px 16px;margin:14px 0;font-size:14px;}
+  .box.warn{background:var(--warn-bg);border-left:4px solid var(--warn);color:#7c2d12;}
+  .box.tip{background:var(--tip-bg);border-left:4px solid var(--tip);color:#134e4a;}
+  .box.mem{background:#fff;border:1px dashed var(--brand);color:var(--ink-2);}
+  .box b{color:inherit;}
+  .box .lbl{font-weight:700;margin-right:6px;}
+
+  /* ---------- 卡片网格 ---------- */
+  .grid{display:grid;gap:12px;margin:12px 0;}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fff;}
+  .card .t{font-weight:700;color:var(--brand);font-size:14.5px;margin-bottom:4px;}
+  .card .d{font-size:13.5px;color:var(--ink-2);}
+  .card ul{margin:6px 0 0;padding-left:18px;font-size:13.5px;color:var(--ink-2);}
+
+  /* 字母表 */
+  .alpha{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;margin-top:10px;}
+  .ltr{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#fff;}
+  .ltr .L{font-size:19px;font-weight:700;color:var(--brand);}
+  .ltr .N{font-size:12px;color:var(--ink-3);}
+  .ltr .S{font-size:12.5px;color:var(--ink-2);}
+  .ltr.spec{background:var(--hl);border-color:#f0d999;}
+
+  /* 例句 */
+  .ex{margin:6px 0;padding-left:14px;border-left:3px solid var(--line);
+      font-size:14px;color:var(--ink-2);}
+  .ex .zh{color:var(--ink-3);font-size:13px;}
+  .ex .mark{background:var(--hl);padding:0 3px;border-radius:3px;color:#78350f;font-weight:600;}
+
+  ul.plain{padding-left:20px;margin:8px 0;}
+  ul.plain li{margin:4px 0;}
+  code{background:#f1f3f6;padding:1px 5px;border-radius:4px;font-size:13.5px;
+    font-family:"SF Mono",Consolas,monospace;}
+
+  footer{text-align:center;color:var(--ink-3);font-size:12.5px;padding:20px 0 0;}
+
+  /* ---------- 打印 ---------- */
+  @media print{
+    body{background:#fff;font-size:11.5pt;}
+    header.hero{background:#1f4e79!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    nav.toc{display:none;}
+    section{break-inside:auto;page-break-inside:auto;border:1px solid #ccc;
+      box-shadow:none;margin-bottom:14px;padding:16px;}
+    h2,h3{break-after:avoid;page-break-after:avoid;}
+    table{break-inside:auto;page-break-inside:auto;}
+    .badge,th.m,th.f,th.n,th.p{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Deutsch für Anfänger · A1–A2</div>
+    <h1>德语初学者核心知识手册</h1>
+    <p>字母 · 发音 · 疑问词 · 冠词与四格 · 单复数变化 · 形容词词尾 · 动词变位 —— 一张表说清「同一个词在不同场景里怎么变」。</p>
+    <div class="chips">
+      <span class="chip">30 个字母</span>
+      <span class="chip">18 个 W-疑问词</span>
+      <span class="chip">4 格 × 3 性</span>
+      <span class="chip">5 类复数</span>
+      <span class="chip">3 型形容词词尾</span>
+      <span class="chip">6 个情态动词</span>
+    </div>
+    <div class="meta">编排原则：先给结论表，再给规则，最后给易错点。所有德语词均标注词性与格，可直接当作查阅手册使用。</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <div class="toc-title">目录</div>
+  <ol>
+    <li><a href="#s1"><span class="num">01</span>字母表（含 Ä Ö Ü ß）</a></li>
+    <li><a href="#s2"><span class="num">02</span>发音规则</a></li>
+    <li><a href="#s3"><span class="num">03</span>疑问词体系（Wo / Wie / Worum…）</a></li>
+    <li><a href="#s4"><span class="num">04</span>名词·冠词·四格</a></li>
+    <li><a href="#s5"><span class="num">05</span>单复数变化规则</a></li>
+    <li><a href="#s6"><span class="num">06</span>形容词词尾变化</a></li>
+    <li><a href="#s7"><span class="num">07</span>动词变位</a></li>
+    <li><a href="#s8"><span class="num">08</span>介词支配的格</a></li>
+    <li><a href="#s9"><span class="num">09</span>语序规则</a></li>
+    <li><a href="#s10"><span class="num">10</span>高频不规则动词表</a></li>
+  </ol>
+</nav>
+
+<!-- ============ 01 字母表 ============ -->
+<section id="s1">
+  <h2><span class="idx">01</span>德语字母表</h2>
+  <p class="sub">26 个拉丁字母 + 3 个变音字母（Ä Ö Ü）+ 1 个特殊字母（ß），共 30 个。</p>
+
+  <h3>1.1 基础 26 字母（含名称与发音要点）</h3>
+  <div class="alpha">
+    <div class="ltr"><div class="L">A a</div><div class="N">[aː]</div><div class="S">啊（长音）</div></div>
+    <div class="ltr"><div class="L">B b</div><div class="N">[beː]</div><div class="S">词尾读 [p]</div></div>
+    <div class="ltr"><div class="L">C c</div><div class="N">[tseː]</div><div class="S">多见于外来词</div></div>
+    <div class="ltr"><div class="L">D d</div><div class="N">[deː]</div><div class="S">词尾读 [t]</div></div>
+    <div class="ltr"><div class="L">E e</div><div class="N">[eː]</div><div class="S">词尾 -e 读 [ə]</div></div>
+    <div class="ltr"><div class="L">F f</div><div class="N">[ɛf]</div><div class="S">同英语 f</div></div>
+    <div class="ltr"><div class="L">G g</div><div class="N">[geː]</div><div class="S">始终硬音（go）</div></div>
+    <div class="ltr"><div class="L">H h</div><div class="N">[haː]</div><div class="S">元音后不发音</div></div>
+    <div class="ltr"><div class="L">I i</div><div class="N">[iː]</div><div class="S">衣（长音）</div></div>
+    <div class="ltr"><div class="L">J j</div><div class="N">[jɔt]</div><div class="S">读英语 y（ja）</div></div>
+    <div class="ltr"><div class="L">K k</div><div class="N">[kaː]</div><div class="S">同英语 k</div></div>
+    <div class="ltr"><div class="L">L l</div><div class="N">[ɛl]</div><div class="S">舌尖抵上颚</div></div>
+    <div class="ltr"><div class="L">M m</div><div class="N">[ɛm]</div><div class="S">同英语 m</div></div>
+    <div class="ltr"><div class="L">N n</div><div class="N">[ɛn]</div><div class="S">同英语 n</div></div>
+    <div class="ltr"><div class="L">O o</div><div class="N">[oː]</div><div class="S">哦（圆唇）</div></div>
+    <div class="ltr"><div class="L">P p</div><div class="N">[peː]</div><div class="S">同英语 p</div></div>
+    <div class="ltr"><div class="L">Q q</div><div class="N">[kuː]</div><div class="S">qu = [kv]</div></div>
+    <div class="ltr"><div class="L">R r</div><div class="N">[ɛʁ]</div><div class="S">小舌音/颤音</div></div>
+    <div class="ltr"><div class="L">S s</div><div class="N">[ɛs]</div><div class="S">元音前读 [z]</div></div>
+    <div class="ltr"><div class="L">T t</div><div class="N">[teː]</div><div class="S">同英语 t</div></div>
+    <div class="ltr"><div class="L">U u</div><div class="N">[uː]</div><div class="S">乌（圆唇）</div></div>
+    <div class="ltr"><div class="L">V v</div><div class="N">[faʊ]</div><div class="S">德语词读 [f]</div></div>
+    <div class="ltr"><div class="L">W w</div><div class="N">[veː]</div><div class="S">读英语 v</div></div>
+    <div class="ltr"><div class="L">X x</div><div class="N">[ɪks]</div><div class="S">= [ks]</div></div>
+    <div class="ltr"><div class="L">Y y</div><div class="N">[ʏpsilɔn]</div><div class="S">读同 ü</div></div>
+    <div class="ltr"><div class="L">Z z</div><div class="N">[tsɛt]</div><div class="S">永远读 [ts]</div></div>
+  </div>
+
+  <h3>1.2 四个特殊字母</h3>
+  <div class="alpha">
+    <div class="ltr spec"><div class="L">Ä ä</div><div class="N">[ɛː] / [ɛ]</div><div class="S">近似「诶」，嘴开大</div></div>
+    <div class="ltr spec"><div class="L">Ö ö</div><div class="N">[øː] / [œ]</div><div class="S">发 e 时把唇收圆</div></div>
+    <div class="ltr spec"><div class="L">Ü ü</div><div class="N">[yː] / [ʏ]</div><div class="S">发 i 时把唇收圆</div></div>
+    <div class="ltr spec"><div class="L">ß</div><div class="N">[s]</div><div class="S">永远清 s；无大写</div></div>
+  </div>
+
+  <div class="box warn">
+    <span class="lbl">易错</span>
+    <b>ß 与 ss 的分工</b>：<code>ß</code> 只出现在<b>长元音</b>之后（Stra<u>ß</u>e, gro<u>ß</u>, Fuß），<code>ss</code> 出现在<b>短元音</b>之后（Wa<u>ss</u>er, Ki<u>ss</u>en, mü<u>ss</u>en）。
+    1996 正字法改革后，<code>ß</code> 只用于长元音后；瑞士和列支敦士登用 <code>ss</code> 代替 <code>ß</code>。大写 ẞ 于 2017 年才被正式纳入，日常极少见。
+    无法输入时可用 <code>ae / oe / ue</code> 替代变音字母（<b>注意排序时 ä 排在 a 之后，不是 z 之后</b>）。
+  </div>
+
+  <div class="box tip">
+    <span class="lbl">关键</span>
+    变音字母是<b>独立音位</b>，不是装饰：schön（美丽的）≠ schon（已经）；schwül（闷热）≠ schul（学校相关）。
+    初学阶段请把 <code>ä / ö / ü</code> 当作三个全新字母单独记，不要当成 a/o/u 的变体。
+  </div>
+</section>
+
+<!-- ============ 02 发音 ============ -->
+<section id="s2">
+  <h2><span class="idx">02</span>发音规则</h2>
+  <p class="sub">德语是「所见即所读」的语言，约 90% 的单词可直接拼读。掌握下面 6 条规则即可覆盖绝大多数情况。</p>
+
+  <h3>2.1 元音长短（决定词义，必须区分）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>情形</th><th>元音</th><th>例词</th><th>对立最小对</th></tr></thead>
+    <tbody>
+      <tr><td>元音 + <b>单个</b>辅音</td><td>通常<b>长</b></td><td class="de">Tag [taːk], gut [guːt]</td><td rowspan="5"> bieten [ˈbiːtn̩] 提供<br> bitten [ˈbɪtn̩] 请求<br><br> Staat [ʃtaːt] 国家<br> Stadt [ʃtat] 城市<br><br> kam [kaːm] 来过<br> Kamm [kam] 梳子</td></tr>
+      <tr><td>元音 + <b>双写</b>辅音</td><td>通常<b>短</b></td><td class="de">Ha<u>nn</u>a, Ko<u>mm</u>en</td></tr>
+      <tr><td>元音 + <b>h</b>（stummes h）</td><td><b>长</b></td><td class="de">Ba<u>h</u>n, U<u>h</u>r, fü<u>h</u>len</td></tr>
+      <tr><td><b>双写元音</b>（aa/ee/oo/ie）</td><td><b>长</b></td><td class="de">Boot, See, Liebe</td></tr>
+      <tr><td>元音 + <b>ß</b></td><td><b>长</b></td><td class="de">Fuß, Straße</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="sub">例外高频词（单辅音后仍读短音）：<span class="de">bin, bis, das, es, hat, was, mit, in, im, ob</span>。</p>
+
+  <h3>2.2 单元音对照</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>字母</th><th>长音</th><th>短音</th><th>中文近似</th></tr></thead>
+    <tbody>
+      <tr><td class="de">a</td><td class="ipa">[aː] Vater</td><td class="ipa">[a] Mann</td><td>啊（长）/ 短促啊</td></tr>
+      <tr><td class="de">e</td><td class="ipa">[eː] lesen</td><td class="ipa">[ɛ] Bett</td><td>诶 / 短诶；词尾读 [ə]「呃」</td></tr>
+      <tr><td class="de">i</td><td class="ipa">[iː] Liebe</td><td class="ipa">[ɪ] mit</td><td>衣（长）/ 短衣</td></tr>
+      <tr><td class="de">o</td><td class="ipa">[oː] Boot</td><td class="ipa">[ɔ] Gott</td><td>哦（圆唇）/ 短哦</td></tr>
+      <tr><td class="de">u</td><td class="ipa">[uː] Schule</td><td class="ipa">[ʊ] Mutter</td><td>乌（圆唇）/ 短乌</td></tr>
+      <tr><td class="de">ä</td><td class="ipa">[ɛː] Bär</td><td class="ipa">[ɛ] kräftig</td><td>诶，嘴开得更大</td></tr>
+      <tr><td class="de">ö</td><td class="ipa">[øː] schön</td><td class="ipa">[œ] öffnen</td><td>「呃」+ 圆唇（吹口哨状）</td></tr>
+      <tr><td class="de">ü</td><td class="ipa">[yː] Tür</td><td class="ipa">[ʏ] Mütze</td><td>「淤」+ 圆唇（唇更紧）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>2.3 双元音（Diphthonge）共 3 组</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>写法</th><th>发音</th><th>中文近似</th><th>例词</th></tr></thead>
+    <tbody>
+      <tr><td class="de">ei, ai, ay, ey</td><td class="ipa">[aɪ]</td><td>爱</td><td class="de">Ei, Mai, Bayern, Meyer</td></tr>
+      <tr><td class="de">au</td><td class="ipa">[aʊ]</td><td>奥</td><td class="de">Haus, Auto, auch</td></tr>
+      <tr><td class="de">eu, äu</td><td class="ipa">[ɔʏ]</td><td>奥伊（连读）</td><td class="de">deutsch, neun, Häuser</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box mem">
+    <span class="lbl">记忆</span> <b>ie 不是双元音</b>——它读长音 [iː]（Liebe, hier, Wien）。
+    口诀：<i>ei 读「爱」，ie 读「衣」</i>，两者完全相反，是中文母语者最高频的发音错误之一。
+  </div>
+
+  <h3>2.4 辅音与辅音组合</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>字母/组合</th><th>发音</th><th>说明</th><th>例词</th></tr></thead>
+    <tbody>
+      <tr><td class="de">w</td><td class="ipa">[v]</td><td>读英语 <b>v</b>（上齿碰下唇）</td><td class="de">Wasser → "Vasser"</td></tr>
+      <tr><td class="de">v</td><td class="ipa">[f]</td><td>德语词读 <b>f</b>；外来词可读 [v]</td><td class="de">Vater → "Fater"；Visum 例外</td></tr>
+      <tr><td class="de">z</td><td class="ipa">[ts]</td><td>永远「次」，从不读 [z]</td><td class="de">Zeit, zehn, Platz</td></tr>
+      <tr><td class="de">j</td><td class="ipa">[j]</td><td>读英语 <b>y</b></td><td class="de">ja, Juli, Japan</td></tr>
+      <tr><td class="de">r</td><td class="ipa">[ʁ]</td><td>小舌音（标准）；方言可舌尖颤</td><td class="de">rot, drei</td></tr>
+      <tr><td class="de">-er / -r</td><td class="ipa">[ɐ]</td><td>词尾元音化，弱化如「呃」</td><td class="de">Vater, Lehrer, Uhr</td></tr>
+      <tr><td class="de">s</td><td class="ipa">[z] / [s]</td><td><b>元音前</b>浊 [z]，其余清 [s]</td><td class="de">See [zeː]；Haus [haʊs]</td></tr>
+      <tr><td class="de">ch（软）</td><td class="ipa">[ç]</td><td>在 e i ä ö ü、l n r 及 -chen 后</td><td class="de">ich, München, Töchter</td></tr>
+      <tr><td class="de">ch（硬）</td><td class="ipa">[x]</td><td>在 a o u au 后，喉部摩擦</td><td class="de">acht, Buch, auch</td></tr>
+      <tr><td class="de">ch（外来）</td><td class="ipa">[k]</td><td>词首外来词、-chs</td><td class="de">Chor, sechs, Sachsen</td></tr>
+      <tr><td class="de">sch</td><td class="ipa">[ʃ]</td><td>一个音「施」，不是 s+c+h</td><td class="de">Schule, schön</td></tr>
+      <tr><td class="de">sp / st</td><td class="ipa">[ʃp] / [ʃt]</td><td><b>词首或词根首</b>读「施p/施t」</td><td class="de">Sport, Stadt, Straße</td></tr>
+      <tr><td class="de">tsch</td><td class="ipa">[tʃ]</td><td>英语 ch（church）</td><td class="de">Deutsch, Tschüss</td></tr>
+      <tr><td class="de">pf</td><td class="ipa">[pf]</td><td>两个音都发</td><td class="de">Apfel, Pfanne</td></tr>
+      <tr><td class="de">qu</td><td class="ipa">[kv]</td><td>k + v</td><td class="de">Quelle, Qualität</td></tr>
+      <tr><td class="de">ng / nk</td><td class="ipa">[ŋ] / [ŋk]</td><td>同英语 sing / think</td><td class="de">singen, danke</td></tr>
+      <tr><td class="de">b d g 词尾</td><td class="ipa">[p] [t] [k]</td><td><b>尾音清化</b>（Auslautverhärtung）</td><td class="de">Tag→[taːk], lieb→[liːp]</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn">
+    <span class="lbl">易错</span>
+    <b>sp / st 只在音节开头读「施」</b>：Sport [ʃpɔʁt] 但 Wespe [ˈvɛspə]（sp 在词中，仍读 sp）；
+    Straße [ˈʃtʁaːsə] 但 Häuschen 的 -chen 前不受影响。判断依据是<b>词根起始音节</b>，不是字母位置。
+  </div>
+
+  <h3>2.5 重音规则</h3>
+  <div class="grid g3">
+    <div class="card"><div class="t">词根第一音节</div><div class="d">绝大多数德语词重音在<b>词根第一音节</b>：<span class="de">HAUS, LEH-rer, AR-bei-ten</span></div></div>
+    <div class="card"><div class="t">不可分前缀无重音</div><div class="d"><span class="de">be-, ge-, er-, ver-, zer-, ent-, emp-, miss-</span> 不重读：<span class="de">verSTEHEN, beKOMMen</span></div></div>
+    <div class="card"><div class="t">可分前缀有重音</div><div class="d"><span class="de">an-, auf-, aus-, mit-, ein-, zu-</span> 等重读：<span class="de">ANfangen, AUFstehen</span></div></div>
+    <div class="card"><div class="t">复合词重音在前件</div><div class="d"><span class="de">KRANKenhaus, HAUS-tür, BAHN-hof</span>——修饰成分重读</div></div>
+    <div class="card"><div class="t">外来词重音常在后</div><div class="d"><span class="de">StuDENT, InformaTION, Re-stau-RANT</span>（法语源）</div></div>
+    <div class="card"><div class="t">后缀定重音</div><div class="d"><span class="de">-tion, -ität, -ei, -ieren</span> 前的音节重读：<span class="de">InformatION, BäckerEI</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 03 疑问词 ============ -->
+<section id="s3">
+  <h2><span class="idx">03</span>疑问词体系（W-Fragen）</h2>
+  <p class="sub">德语疑问词几乎都以 W 开头，且该 W 读英语的 <b>v</b>。分为「变格的四个人称疑问词」与「不变格的副词类」两大阵营。</p>
+
+  <h3>3.1 核心 8 个 + 常用扩展</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>疑问词</th><th>含义</th><th>问的是什么</th><th>例句</th></tr></thead>
+    <tbody>
+      <tr><td class="de">wer</td><td>谁</td><td>人（第一格）</td><td class="de">Wer ist das? — Das ist mein Bruder.</td></tr>
+      <tr><td class="de">was</td><td>什么</td><td>事物 / 动作</td><td class="de">Was machst du? — Ich lerne Deutsch.</td></tr>
+      <tr><td class="de">wo</td><td>在哪里</td><td><b>静态位置</b></td><td class="de">Wo wohnst du? — In Hefei.</td></tr>
+      <tr><td class="de">wohin</td><td>去哪里</td><td><b>方向 / 目的地</b></td><td class="de">Wohin gehst du? — Ins Büro.</td></tr>
+      <tr><td class="de">woher</td><td>从哪里来</td><td><b>来源 / 出处</b></td><td class="de">Woher kommst du? — Aus China.</td></tr>
+      <tr><td class="de">wann</td><td>什么时候</td><td>时间点</td><td class="de">Wann beginnt der Kurs? — Um 9 Uhr.</td></tr>
+      <tr><td class="de">warum</td><td>为什么</td><td>原因（中性）</td><td class="de">Warum lernst du Deutsch? — Weil…</td></tr>
+      <tr><td class="de">wie</td><td>怎么 / 如何</td><td>方式 / 状态</td><td class="de">Wie geht es dir? — Gut, danke.</td></tr>
+      <tr><td class="de">welcher / -e / -es</td><td>哪一个</td><td>选择（<b>要变词尾</b>）</td><td class="de">Welches Buch liest du?</td></tr>
+      <tr><td class="de">wie viel / viele</td><td>多少</td><td>不可数 / 可数</td><td class="de">Wie viel kostet das? Wie viele Bücher?</td></tr>
+      <tr><td class="de">wie lange</td><td>多久</td><td>持续时长</td><td class="de">Wie lange lernst du schon Deutsch?</td></tr>
+      <tr><td class="de">wie oft</td><td>多久一次</td><td>频率</td><td class="de">Wie oft gehst du zum Sport?</td></tr>
+      <tr><td class="de">wie alt</td><td>多大年纪</td><td>年龄</td><td class="de">Wie alt bist du?</td></tr>
+      <tr><td class="de">seit wann</td><td>从何时起</td><td>起点（配现在时）</td><td class="de">Seit wann wohnst du hier?</td></tr>
+      <tr><td class="de">wieso / weshalb</td><td>为什么</td><td>惊讶 / 书面</td><td class="de">Wieso bist du schon hier?</td></tr>
+      <tr><td class="de">wozu</td><td>用来做什么</td><td>目的</td><td class="de">Wozu brauchst du das?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>3.2 wer 的四格变化（问人必须匹配格）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th>疑问词</th><th>作用</th><th>例句</th></tr></thead>
+    <tbody>
+      <tr><td>Nominativ 第一格</td><td class="de m">wer</td><td>主语</td><td class="de">Wer kommt heute?</td></tr>
+      <tr><td>Akkusativ 第四格</td><td class="de m">wen</td><td>直接宾语</td><td class="de">Wen siehst du?</td></tr>
+      <tr><td>Dativ 第三格</td><td class="de m">wem</td><td>间接宾语</td><td class="de">Wem gibst du das Buch?</td></tr>
+      <tr><td>Genitiv 第二格</td><td class="de m">wessen</td><td>所属</td><td class="de">Wessen Tasche ist das?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>3.3 重点辨析：warum / worum / woran …</h3>
+  <div class="box tip">
+    <span class="lbl">规则</span>
+    当要问「<b>关于某事物</b>的…」而动词/形容词要求带介词时（denken <b>an</b>+A, warten <b>auf</b>+A, sprechen <b>über</b>+A…），
+    若宾语是<b>物</b>，用 <code>wo(r)- + 介词</code> 合并成一个词：
+    <b>介词以元音开头时插入 r</b>（wo<b>r</b>an, wo<b>r</b>auf, wo<b>r</b>um, wo<b>r</b>über），
+    以辅音开头直接连写（womit, wovon, wozu, wonach）。
+    若宾语是<b>人</b>，则介词保持原位 + 人称疑问词：<code>auf wen wartest du?</code> / <code>mit wem gehst du?</code>
+  </div>
+
+  <div class="tbl-scroll">
+  <table>
+    <caption>高频 wo(r)- 合并疑问词（问「物」）</caption>
+    <thead><tr><th>疑问词</th><th>对应介词</th><th>含义</th><th>例句</th></tr></thead>
+    <tbody>
+      <tr><td class="de">worum</td><td>um + A</td><td>关于什么 / 为了什么</td><td class="de">Worum geht es in dem Film?</td></tr>
+      <tr><td class="de">woran</td><td>an + A/D</td><td>在什么上 / 想起什么</td><td class="de">Woran denkst du?</td></tr>
+      <tr><td class="de">worauf</td><td>auf + A/D</td><td>在什么上面 / 等什么</td><td class="de">Worauf wartest du?</td></tr>
+      <tr><td class="de">worüber</td><td>über + A/D</td><td>关于什么 / 谈论什么</td><td class="de">Worüber sprecht ihr?</td></tr>
+      <tr><td class="de">womit</td><td>mit + D</td><td>用什么</td><td class="de">Womit fährst du zur Arbeit?</td></tr>
+      <tr><td class="de">wovon</td><td>von + D</td><td>从中 / 关于</td><td class="de">Wovon sprichst du?</td></tr>
+      <tr><td class="de">wofür</td><td>für + A</td><td>为了什么</td><td class="de">Wofür brauchst du das Geld?</td></tr>
+      <tr><td class="de">wovor / wohinter</td><td>vor / hinter</td><td>在什么前面/后面</td><td class="de">Wovor hast du Angst?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn">
+    <span class="lbl">高频混淆</span>
+    <b>warum ≠ worum</b>：<code>warum</code> = why（为什么，问原因，回答 weil…）；
+    <code>worum</code> = <b>um was</b>（关于什么/为了什么，是因为动词要求介词 um：es geht <b>um</b> + A）。
+    同理 <code>weshalb / wieso</code> 与 warum 同义（书面 / 带惊讶语气），但<b>没有</b>介词含义。
+    另一个坑：<b>wann ≠ wenn</b>——wann 是疑问「何时」，wenn 是从属连词「当…时 / 如果」。
+  </div>
+
+  <h3>3.4 疑问句语序</h3>
+  <div class="ex"><span class="de"><span class="mark">Wo</span> <span class="mark">wohnst</span> du?</span> <span class="zh">疑问词占第 1 位，变位动词占第 2 位，主语随后。</span></div>
+  <div class="ex"><span class="de">Warum <span class="mark">lernst</span> du Deutsch?</span> <span class="zh">不能说 <s>Warum du lernst Deutsch?</s></span></div>
+  <div class="ex"><span class="de">Wer <span class="mark">kommt</span>?</span> <span class="zh">wer 本身即主语，后面不再加主语（Wer kommt er? ✗）。</span></div>
+  <div class="box mem">
+    <span class="lbl">口语</span> 德语口语常把 wohin / woher 拆开：<span class="de">Wo gehst du <b>hin</b>?</span> / <span class="de">Wo kommst du <b>her</b>?</span> 完全自然，比合写更常见。
+  </div>
+</section>
+
+<!-- ============ 04 名词·冠词·四格 ============ -->
+<section id="s4">
+  <h2><span class="idx">04</span>名词 · 冠词 · 四格（核心中的核心）</h2>
+  <p class="sub">德语一切变化的底层逻辑：<b>性（Genus）× 数（Numerus）× 格（Kasus）</b>。冠词、形容词、代词都必须与之匹配。</p>
+
+  <h3>4.1 三性 + 四格的判断口诀</h3>
+  <div class="grid g2">
+    <div class="card">
+      <div class="t">三性：der / die / das</div>
+      <ul>
+        <li><span class="badge m">m</span> <span class="de">der</span> 阳性 — 男性、季节、月份、周名、方位、多数矿物/酒</li>
+        <li><span class="badge f">f</span> <span class="de">die</span> 阴性 — 女性、数字、多数抽象名词后缀 -ung/-heit/-keit/-schaft/-ei/-tion/-ik</li>
+        <li><span class="badge n">n</span> <span class="de">das</span> 中性 — 幼体、金属、化学元素、颜色、动词名词化、后缀 -chen/-lein/-tum/-nis/-um</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="t">四格的提问方式</div>
+      <ul>
+        <li><b>Nominativ</b> 第一格：wer / was? → 主语</li>
+        <li><b>Akkusativ</b> 第四格：wen / was? → 直接宾语</li>
+        <li><b>Dativ</b> 第三格：wem? → 间接宾语（「给谁」）</li>
+        <li><b>Genitiv</b> 第二格：wessen? → 所属（「谁的」）</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>4.2 定冠词 der/die/das 全变格表（背下来）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th class="m">阳性 m</th><th class="f">阴性 f</th><th class="n">中性 n</th><th class="p">复数 Pl.</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nominativ</b></td><td class="de m">der Mann</td><td class="de f">die Frau</td><td class="de n">das Kind</td><td class="de p">die Leute</td></tr>
+      <tr><td><b>Akkusativ</b></td><td class="de m">de<u>n</u> Mann</td><td class="de f">die Frau</td><td class="de n">das Kind</td><td class="de p">die Leute</td></tr>
+      <tr><td><b>Dativ</b></td><td class="de m">de<u>m</u> Mann</td><td class="de f">de<u>r</u> Frau</td><td class="de n">de<u>m</u> Kind</td><td class="de p">de<u>n</u> Leute<u>n</u></td></tr>
+      <tr><td><b>Genitiv</b></td><td class="de m">de<u>s</u> Manne<u>s</u></td><td class="de f">der Frau</td><td class="de n">de<u>s</u> Kinde<u>s</u></td><td class="de p">der Leute</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box mem">
+    <span class="lbl">记忆</span>
+    <b>只有阳性在第四格变（der → den）</b>，其余变化集中在第三格：<code>dem / der / den + 名词尾 -n</code>。
+    第二格阳性与中性名词本身要加 <code>-(e)s</code>（des Mannes, des Kindes）。
+    复数第三格一律加 <b>-n</b>（若复数不以 -n/-s 结尾）：<span class="de">mit den Kinder<u>n</u></span>。
+  </div>
+
+  <h3>4.3 不定冠词 ein/eine 与否定 kein 变格表</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th class="m">阳性</th><th class="f">阴性</th><th class="n">中性</th><th class="p">复数</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nom.</b></td><td class="de m">ein Mann</td><td class="de f">eine Frau</td><td class="de n">ein Kind</td><td class="de p">—／meine Kinder</td></tr>
+      <tr><td><b>Akk.</b></td><td class="de m">einen Mann</td><td class="de f">eine Frau</td><td class="de n">ein Kind</td><td class="de p">—／meine Kinder</td></tr>
+      <tr><td><b>Dat.</b></td><td class="de m">einem Mann</td><td class="de f">einer Frau</td><td class="de n">einem Kind</td><td class="de p">—／meinen Kindern</td></tr>
+      <tr><td><b>Gen.</b></td><td class="de m">eines Mannes</td><td class="de f">einer Frau</td><td class="de n">eines Kindes</td><td class="de p">—／meiner Kinder</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><span class="de">kein</span> 完全按上表变（<span class="de">kein, keine, keinen, keinem, keiner, keines</span>），复数用 <span class="de">keine</span>。否定「一个」时用 kein，否定「这个」时用 nicht。</p>
+
+  <h3>4.4 人称代词四格变格</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>人称</th><th>Nom.</th><th>Akk.</th><th>Dat.</th><th>Gen.（少用）</th></tr></thead>
+    <tbody>
+      <tr><td>ich 我</td><td class="de">ich</td><td class="de">mich</td><td class="de">mir</td><td class="de">meiner</td></tr>
+      <tr><td>du 你</td><td class="de">du</td><td class="de">dich</td><td class="de">dir</td><td class="de">deiner</td></tr>
+      <tr><td>er / sie / es 他/她/它</td><td class="de">er / sie / es</td><td class="de">ihn / sie / es</td><td class="de">ihm / ihr / ihm</td><td class="de">seiner / ihrer / seiner</td></tr>
+      <tr><td>wir 我们</td><td class="de">wir</td><td class="de">uns</td><td class="de">uns</td><td class="de">unser</td></tr>
+      <tr><td>ihr 你们</td><td class="de">ihr</td><td class="de">euch</td><td class="de">euch</td><td class="de">euer</td></tr>
+      <tr><td>sie 他们 / Sie 您</td><td class="de">sie / Sie</td><td class="de">sie / Sie</td><td class="de">ihnen / Ihnen</td><td class="de">ihrer / Ihrer</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <span class="lbl">易错</span>
+    <b>sie 的三个身份</b>：小写 sie = 她 / 他们；大写 Sie = 您（敬称），其变格 <span class="de">Ihnen / Ihr</span> 也大写。
+    动词变位上，sie（他们）与 Sie（您）形式相同（均为原形 -en），靠上下文区分。
+  </div>
+
+  <h3>4.5 物主代词（mein/dein/sein…）词尾 = ein 变格 + 复数</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th></th><th class="m">阳性</th><th class="f">阴性</th><th class="n">中性</th><th class="p">复数</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nom.</b></td><td class="de m">mein</td><td class="de f">meine</td><td class="de n">mein</td><td class="de p">meine</td></tr>
+      <tr><td><b>Akk.</b></td><td class="de m">meinen</td><td class="de f">meine</td><td class="de n">mein</td><td class="de p">meine</td></tr>
+      <tr><td><b>Dat.</b></td><td class="de m">meinem</td><td class="de f">meiner</td><td class="de n">meinem</td><td class="de p">meinen</td></tr>
+      <tr><td><b>Gen.</b></td><td class="de m">meines</td><td class="de f">meiner</td><td class="de n">meines</td><td class="de p">meiner</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>完整词族：<span class="de">mein, dein, sein, ihr, sein, unser, euer, ihr, Ihr</span>（我的/你的/他的/她的/它的/我们的/你们的/他们的/您的）。<span class="de">euer</span> 加词尾时去掉 e：<span class="de">eur<b>e</b>, eur<b>en</b></span>（euere 亦可）。</p>
+</section>
+
+<!-- ============ 05 单复数 ============ -->
+<section id="s5">
+  <h2><span class="idx">05</span>名词单复数变化规则</h2>
+  <p class="sub">德语有 5 类复数词尾，有时还要加变音（Umlaut），偶尔什么都不变。<b>好消息：所有复数名词的定冠词都是 die</b>。</p>
+
+  <div class="box tip">
+    <span class="lbl">最重要的一条</span>
+    无论单数是什么性，复数第一格冠词<b>一律 die</b>：<span class="de"><span class="m">der</span> Mann → <span class="p">die</span> Männer；<span class="f">die</span> Frau → <span class="p">die</span> Frauen；<span class="n">das</span> Kind → <span class="p">die</span> Kinder</span>。
+    单数的 der/die/das 难度在复数里消失一半。
+  </div>
+
+  <h3>5.1 五类复数词尾总表</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>类型</th><th>词尾</th><th>变音</th><th>典型适用</th><th>例词</th></tr></thead>
+    <tbody>
+      <tr><td>① <b>-e</b></td><td class="de">-e</td><td>常加</td><td>多数<b>阳性</b>与部分中性</td><td class="de">der Tag → die Tag<b>e</b>；der Stuhl → die Stühl<b>e</b>；das Jahr → die Jahr<b>e</b></td></tr>
+      <tr><td>② <b>-(e)n</b></td><td class="de">-n / -en</td><td>不加</td><td><b>绝大多数阴性</b>（最大一类）</td><td class="de">die Frau → die Fraue<b>n</b>；die Blume → die Blume<b>n</b>；die Wohnung → die Wohnunge<b>n</b></td></tr>
+      <tr><td>③ <b>-er</b></td><td class="de">-er</td><td><b>必加</b>（a/o/u/au）</td><td>多数单音节<b>中性</b> + 少数阳性</td><td class="de">das Kind → die Kind<b>er</b>；das Buch → die Büch<b>er</b>；der Mann → die Männ<b>er</b></td></tr>
+      <tr><td>④ <b>无词尾</b>（-∅）</td><td class="de">—</td><td>有时只加变音</td><td>以 -er/-el/-en/-chen/-lein 结尾的阳/中性</td><td class="de">der Lehrer → die Lehrer；das Mädchen → die Mädchen；der Apfel → die Äpfel</td></tr>
+      <tr><td>⑤ <b>-s</b></td><td class="de">-s</td><td>不加</td><td>英/法语外来词、缩写、姓氏</td><td class="de">das Auto → die Auto<b>s</b>；die DVD → die DVD<b>s</b>；der Chef → die Chef<b>s</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>5.2 按词尾/性别的速查规则（猜测准确率很高）</h3>
+  <div class="grid g2">
+    <div class="card"><div class="t">阴性名词 → -(e)n</div><ul>
+      <li><span class="de">-ung, -heit, -keit, -schaft, -ei, -tion, -ik, -tät</span> → <b>-en</b></li>
+      <li><span class="de">die Wohnung → die Wohnungen</span></li>
+      <li><span class="de">die Freundschaft → die Freundschaften</span></li></ul></div>
+    <div class="card"><div class="t">-in → -nen（职业女性）</div><ul>
+      <li><span class="de">die Lehrerin → die Lehrerinnen</span></li>
+      <li><span class="de">die Ärztin → die Ärztinnen</span></li>
+      <li>永不加变音</li></ul></div>
+    <div class="card"><div class="t">以 -e 结尾 → -n</div><ul>
+      <li>几乎全部阴性 + 以 -e 结尾的阳性弱变化名词</li>
+      <li><span class="de">die Blume → die Blumen</span></li>
+      <li><span class="de">der Name → die Namen；der Junge → die Jungen</span></li></ul></div>
+    <div class="card"><div class="t">-er / -el / -en / -chen / -lein → 不变</div><ul>
+      <li><span class="de">der Löffel → die Löffel</span></li>
+      <li><span class="de">das Zimmer → die Zimmer</span></li>
+      <li>仅靠冠词 die 表示复数</li></ul></div>
+    <div class="card"><div class="t">阳性人的名词 → 常 -en</div><ul>
+      <li><span class="de">der Student → die Studenten</span></li>
+      <li><span class="de">der Kollege → die Kollegen；der Herr → die Herren</span></li></ul></div>
+    <div class="card"><div class="t">外来词 → -s</div><ul>
+      <li><span class="de">das Hotel → die Hotels；das Handy → die Handys</span></li>
+      <li><span class="de">das Baby → die Babys；die App → die Apps</span></li>
+      <li>-s 类<b>永不</b>触发变音</li></ul></div>
+  </div>
+
+  <h3>5.3 变音（Umlaut）规则</h3>
+  <div class="box warn">
+    <span class="lbl">限制</span>
+    <b>只有 a / o / u / au 能加变音</b> → ä / ö / ü / äu。不存在加了点的 e 或 i，
+    所以 <span class="de">der Tisch</span> 的复数只能是 <span class="de">die Tische</span>（元音 i 原样不动，无变音）。
+    <br>• <b>-er 类必加变音</b>（若可能）：<span class="de">das Haus → die Häuser</span><br>
+    • <b>-e 类部分加</b>：<span class="de">der Stuhl → die Stühle</span>，但 <span class="de">der Tag → die Tage</span>（无变音）<br>
+    • <b>-(e)n / -s 类绝不加</b>
+  </div>
+
+  <h3>5.4 复数在四格中的附加变化</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th>形式</th><th>例句</th></tr></thead>
+    <tbody>
+      <tr><td>Nom.（复数）</td><td class="de">die Kinder</td><td class="de">Die Kinder spielen.</td></tr>
+      <tr><td>Akk.（复数）</td><td class="de">die Kinder</td><td class="de">Ich sehe die Kinder.</td></tr>
+      <tr><td><b>Dat.（复数）</b></td><td class="de">den Kinder<b>n</b></td><td class="de">Ich helfe den Kinder<b>n</b>. / mit den Kollege<b>n</b></td></tr>
+      <tr><td>Gen.（复数）</td><td class="de">der Kinder</td><td class="de">Die Bücher der Kinder.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><b>规则</b>：复数第三格必须加 <code>-n</code>——除非复数本身已以 <b>-n</b> 或 <b>-s</b> 结尾（<span class="de">mit den Frauen</span> 不加，<span class="de">mit den Autos</span> 不加）。</p>
+
+  <h3>5.5 两类特殊名词</h3>
+  <div class="grid g2">
+    <div class="card"><div class="t">只有复数（Pluraletantum）</div><div class="d"><span class="de">die Eltern</span> 父母、<span class="de">die Leute</span> 人们、<span class="de">die Ferien</span> 假期、<span class="de">die Kosten</span> 费用 —— 无单数形式</div></div>
+    <div class="card"><div class="t">只有单数（不可数 / 集合）</div><div class="d"><span class="de">das Obst</span> 水果、<span class="de">die Milch</span> 牛奶、<span class="de">das Geld</span> 钱、<span class="de">die Polizei</span> 警察 —— 永远单数，谓语用单数（Die Polizei <b>ist</b> da.）</div></div>
+  </div>
+
+  <h3>5.6 阳性弱变化（N-Deklination）—— 必须单独记</h3>
+  <p>一小撮<b>阳性</b>名词在<b>除第一格单数外的所有形式</b>都加 <code>-(e)n</code>（含复数全部格）。这类词多为有生命名词与以 -e 结尾的阳性词。</p>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>类别</th><th>例词（单数 → 其余各格/复数）</th></tr></thead>
+    <tbody>
+      <tr><td>以 -e 结尾的阳性</td><td class="de">der Junge → des Junge<b>n</b>, dem Junge<b>n</b>, den Junge<b>n</b>, die Junge<b>n</b></td></tr>
+      <tr><td>职业/人物（-ent, -ant, -ist, -oge, -at）</td><td class="de">der Student → den Student<b>en</b>；der Präsident；der Tourist；der Kollege</td></tr>
+      <tr><td>动物等常见词</td><td class="de">der Mensch → den Mensch<b>en</b>；der Bär；der Herr → den Herr<b>n</b>（特殊，-n 不加 e）</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box mem">
+    <span class="lbl">记忆法</span>
+    记名词时<b>永远三件套一起背</b>：冠词 + 单词 + 复数。例：<span class="de">die Wohnung, die Wohnungen</span>。
+    只多花 1 秒，却是唯一可靠的方法——因为复数模式「可猜但不可依赖」。
+  </div>
+</section>
+
+<!-- ============ 06 形容词 ============ -->
+<section id="s6">
+  <h2><span class="idx">06</span>形容词词尾变化（三型）</h2>
+  <p class="sub">核心原理：<b>性与格的信息必须在某处被显示出来</b>。冠词已经显示清楚时形容词就「弱」；冠词显示不清或无冠词时形容词就「强」。</p>
+
+  <h3>6.1 判断流程图</h3>
+  <div class="grid g3">
+    <div class="card"><div class="t">① 形容词前有 der/die/das？</div><div class="d">或 dieser, jeder, welcher, jener, mancher, beide → <b class="n">弱变化</b>（词尾只有 -e / -en）</div></div>
+    <div class="card"><div class="t">② 前面是 ein / kein / mein…？</div><div class="d">不定冠词与 ein- 类词 → <b class="m">混合变化</b>（部分强、部分弱）</div></div>
+    <div class="card"><div class="t">③ 完全没有冠词？</div><div class="d">形容词独自承担全部性与格信息 → <b class="f">强变化</b></div></div>
+  </div>
+
+  <h3>6.2 弱变化（在 der/die/das 之后）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th class="m">阳性</th><th class="f">阴性</th><th class="n">中性</th><th class="p">复数</th></tr></thead>
+    <tbody>
+      <tr><td>Nom.</td><td class="de">der gut<b>e</b> Mann</td><td class="de">die gut<b>e</b> Frau</td><td class="de">das gut<b>e</b> Kind</td><td class="de">die gut<b>en</b> Leute</td></tr>
+      <tr><td>Akk.</td><td class="de">den gut<b>en</b> Mann</td><td class="de">die gut<b>e</b> Frau</td><td class="de">das gut<b>e</b> Kind</td><td class="de">die gut<b>en</b> Leute</td></tr>
+      <tr><td>Dat.</td><td class="de">dem gut<b>en</b> Mann</td><td class="de">der gut<b>en</b> Frau</td><td class="de">dem gut<b>en</b> Kind</td><td class="de">den gut<b>en</b> Leuten</td></tr>
+      <tr><td>Gen.</td><td class="de">des gut<b>en</b> Mannes</td><td class="de">der gut<b>en</b> Frau</td><td class="de">des gut<b>en</b> Kindes</td><td class="de">der gut<b>en</b> Leute</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="sub">口诀：<b>-e 只出现在「第一格 + 阴/中第四格」这 5 个位置，其余全是 -en</b>。</p>
+
+  <h3>6.3 混合变化（在 ein / kein / mein 之后）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th class="m">阳性</th><th class="f">阴性</th><th class="n">中性</th><th class="p">复数</th></tr></thead>
+    <tbody>
+      <tr><td>Nom.</td><td class="de">ein gut<b>er</b> Mann</td><td class="de">eine gut<b>e</b> Frau</td><td class="de">ein gut<b>es</b> Kind</td><td class="de">keine gut<b>en</b> Leute</td></tr>
+      <tr><td>Akk.</td><td class="de">einen gut<b>en</b> Mann</td><td class="de">eine gut<b>e</b> Frau</td><td class="de">ein gut<b>es</b> Kind</td><td class="de">keine gut<b>en</b> Leute</td></tr>
+      <tr><td>Dat.</td><td class="de">einem gut<b>en</b> Mann</td><td class="de">einer gut<b>en</b> Frau</td><td class="de">einem gut<b>en</b> Kind</td><td class="de">keinen gut<b>en</b> Leuten</td></tr>
+      <tr><td>Gen.</td><td class="de">eines gut<b>en</b> Mannes</td><td class="de">einer gut<b>en</b> Frau</td><td class="de">eines gut<b>en</b> Kindes</td><td class="de">keiner gut<b>en</b> Leute</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="sub">口诀：<b>只在「阳性第一格(-er)、中性第一/四格(-es)」这 3 个 ein 显示不清的位置用强词尾，其余同弱变化</b>。ein 无复数，复数只出现在 mein-/kein- 后，按弱变化走。</p>
+
+  <h3>6.4 强变化（无冠词）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>格</th><th class="m">阳性</th><th class="f">阴性</th><th class="n">中性</th><th class="p">复数</th></tr></thead>
+    <tbody>
+      <tr><td>Nom.</td><td class="de">gut<b>er</b> Wein</td><td class="de">gut<b>e</b> Milch</td><td class="de">gut<b>es</b> Brot</td><td class="de">gut<b>e</b> Bücher</td></tr>
+      <tr><td>Akk.</td><td class="de">gut<b>en</b> Wein</td><td class="de">gut<b>e</b> Milch</td><td class="de">gut<b>es</b> Brot</td><td class="de">gut<b>e</b> Bücher</td></tr>
+      <tr><td>Dat.</td><td class="de">gut<b>em</b> Wein</td><td class="de">gut<b>er</b> Milch</td><td class="de">gut<b>em</b> Brot</td><td class="de">gut<b>en</b> Büchern</td></tr>
+      <tr><td>Gen.</td><td class="de">gut<b>en</b> Weines*</td><td class="de">gut<b>er</b> Milch</td><td class="de">gut<b>en</b> Brotes*</td><td class="de">gut<b>er</b> Bücher</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="sub">*阳/中第二格名词本身已有 -(e)s，形容词改用 -en（例外，单独记）。
+  记忆法：<b>强变化词尾 = 定冠词去掉首字母 d</b>（der→-er, die→-e, das→-es, den→-en, dem→-em, des→-es）。</p>
+
+  <div class="box warn">
+    <span class="lbl">易错三连</span>
+    <span class="de">ein groß<b>er</b> Mann</span>（✓ 阳性第一格需强词尾 -er）≠ <span class="de">ein groß<b>es</b> Mann</span>（✗）；<br>
+    <span class="de">der groß<b>e</b> Mann</span>（✓ der 已标明阳性，形容词用弱词尾 -e）≠ <span class="de">der groß<b>er</b> Mann</span>（✗）；<br>
+    <span class="de">Ich trinke kalt<b>es</b> Wasser</span>（✓ 无冠词需强词尾）≠ <span class="de">kalt Wasser</span>（✗）。
+  </div>
+  <div class="box tip">
+    <span class="lbl">例外</span> 形容词在 <b>sein/werden/bleiben 之后作表语时不变化</b>：<span class="de">Der Mann ist <b>groß</b>.</span>（不加词尾）。
+    副词形态同样不变：<span class="de">Er spricht <b>gut</b> Deutsch.</span>
+  </div>
+</section>
+
+<!-- ============ 07 动词 ============ -->
+<section id="s7">
+  <h2><span class="idx">07</span>动词变位</h2>
+  <p class="sub">规律动词按「词干 + 人称词尾」机械生成；真正需要死记的是 sein / haben / werden、wissen 与 6 个情态动词。</p>
+
+  <h3>7.1 现在时（Präsens）规则词尾</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>人称</th><th>词尾</th><th class="de">machen</th><th class="de">lernen</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td class="de">ich</td><td class="de">-e</td><td class="de">mach<b>e</b></td><td class="de">lern<b>e</b></td><td></td></tr>
+      <tr><td class="de">du</td><td class="de">-st</td><td class="de">mach<b>st</b></td><td class="de">lern<b>st</b></td><td></td></tr>
+      <tr><td class="de">er / sie / es</td><td class="de">-t</td><td class="de">mach<b>t</b></td><td class="de">lern<b>t</b></td><td></td></tr>
+      <tr><td class="de">wir</td><td class="de">-en</td><td class="de">mach<b>en</b></td><td class="de">lern<b>en</b></td><td>= 原形</td></tr>
+      <tr><td class="de">ihr</td><td class="de">-t</td><td class="de">mach<b>t</b></td><td class="de">lern<b>t</b></td><td></td></tr>
+      <tr><td class="de">sie / Sie</td><td class="de">-en</td><td class="de">mach<b>en</b></td><td class="de">lern<b>en</b></td><td>= 原形</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <span class="lbl">插入 -e</span>
+    词干以 <b>-t, -d, -tm, -chn, -ffn</b> 结尾时，du / er / ihr 词尾前要插入 <code>-e</code>：
+    <span class="de">arbeiten → du arbeit<b>e</b>st, er arbeit<b>e</b>t, ihr arbeit<b>e</b>t</span>；
+    <span class="de">reden → du red<b>e</b>st；atmen → er atm<b>e</b>t；öffnen → du öffn<b>e</b>st</span>。
+    <br>以 <b>-s, -ß, -z, -x</b> 结尾时，du 不重复 s：<span class="de">du hei<b>ß</b>t, du reis<b>t</b>, du tanzt</span>（不是 *heißst）。
+  </div>
+
+  <h3>7.2 词干元音变化（强变化动词的现在时）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>类型</th><th>变化</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie/es</th></tr></thead>
+    <tbody>
+      <tr><td>a → ä</td><td class="de">fahren</td><td class="de">fahre</td><td class="de">fähr<b>st</b></td><td class="de">fährt</td></tr>
+      <tr><td>a → ä</td><td class="de">schlafen</td><td class="de">schlafe</td><td class="de">schläf<b>st</b></td><td class="de">schläft</td></tr>
+      <tr><td>e → i</td><td class="de">geben</td><td class="de">gebe</td><td class="de">gib<b>st</b></td><td class="de">gibt</td></tr>
+      <tr><td>e → i</td><td class="de">essen</td><td class="de">esse</td><td class="de">iss<b>t</b></td><td class="de">isst</td></tr>
+      <tr><td>e → ie</td><td class="de">lesen</td><td class="de">lese</td><td class="de">lies<b>t</b></td><td class="de">liest</td></tr>
+      <tr><td>e → ie</td><td class="de">sehen</td><td class="de">sehe</td><td class="de">siehs<b>t</b></td><td class="de">sieht</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="sub">只在 <b>du</b> 与 <b>er/sie/es</b> 两个形式上换音；ich / wir / sie / ihr 保持原形词干。词尾照常加 -st / -t（不加 -e）。</p>
+
+  <h3>7.3 四大不规则动词（必须背死）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>人称</th><th class="de">sein 是</th><th class="de">haben 有</th><th class="de">werden 成为/将来</th><th class="de">wissen 知道</th></tr></thead>
+    <tbody>
+      <tr><td class="de">ich</td><td class="de">bin</td><td class="de">habe</td><td class="de">werde</td><td class="de">weiß</td></tr>
+      <tr><td class="de">du</td><td class="de">bist</td><td class="de">hast</td><td class="de">wirst</td><td class="de">weißt</td></tr>
+      <tr><td class="de">er/sie/es</td><td class="de">ist</td><td class="de">hat</td><td class="de">wird</td><td class="de">weiß</td></tr>
+      <tr><td class="de">wir</td><td class="de">sind</td><td class="de">haben</td><td class="de">werden</td><td class="de">wissen</td></tr>
+      <tr><td class="de">ihr</td><td class="de">seid</td><td class="de">habt</td><td class="de">werdet</td><td class="de">wisst</td></tr>
+      <tr><td class="de">sie/Sie</td><td class="de">sind</td><td class="de">haben</td><td class="de">werden</td><td class="de">wissen</td></tr>
+      <tr><td>过去时（ich/er）</td><td class="de">war</td><td class="de">hatte</td><td class="de">wurde</td><td class="de">wusste</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box mem">
+    <span class="lbl">注意</span> haben 的 <span class="de">du hast / er hat</span> 丢掉了词干 b；wissen 的 <span class="de">ich weiß / er weiß</span> 同形（与情态动词一样的「一三人称同形」特征）。
+  </div>
+
+  <h3>7.4 情态动词（Modalverben）6 个</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>原形</th><th>含义</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie</th><th class="de">wir/sie</th><th class="de">ihr</th></tr></thead>
+    <tbody>
+      <tr><td class="de">können</td><td>能够 / 可以</td><td class="de">kann</td><td class="de">kannst</td><td class="de">kann</td><td class="de">können</td><td class="de">könnt</td></tr>
+      <tr><td class="de">müssen</td><td>必须</td><td class="de">muss</td><td class="de">musst</td><td class="de">muss</td><td class="de">müssen</td><td class="de">müsst</td></tr>
+      <tr><td class="de">dürfen</td><td>被允许</td><td class="de">darf</td><td class="de">darfst</td><td class="de">darf</td><td class="de">dürfen</td><td class="de">dürft</td></tr>
+      <tr><td class="de">wollen</td><td>想要</td><td class="de">will</td><td class="de">willst</td><td class="de">will</td><td class="de">wollen</td><td class="de">wollt</td></tr>
+      <tr><td class="de">sollen</td><td>应该</td><td class="de">soll</td><td class="de">sollst</td><td class="de">soll</td><td class="de">sollen</td><td class="de">sollt</td></tr>
+      <tr><td class="de">mögen</td><td>喜欢</td><td class="de">mag</td><td class="de">magst</td><td class="de">mag</td><td class="de">mögen</td><td class="de">mögt</td></tr>
+      <tr><td class="de">möchte<em>*</em></td><td>想要（礼貌 Konj. II）</td><td class="de">möchte</td><td class="de">möchtest</td><td class="de">möchte</td><td class="de">möchten</td><td class="de">möchtet</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <span class="lbl">框型结构</span>
+    情态动词变位后占第 2 位，<b>主动词以不定式跑到句尾</b>：<span class="de">Ich <b>kann</b> Deutsch <b>sprechen</b>.</span> / <span class="de">Du <b>musst</b> jetzt <b>gehen</b>.</span>
+    <br><b>müssen nicht ≠ 禁止</b>：<span class="de">Du musst nicht kommen.</span> = 你不必来；表示「不许」用 <span class="de">Du darfst nicht rauchen.</span>
+  </div>
+
+  <h3>7.5 完成时（Perfekt）—— 口语的过去时</h3>
+  <div class="grid g2">
+    <div class="card"><div class="t">结构</div><div class="d">主语 + <b>haben/sein（变位，第 2 位）</b> + … + <b>第二分词（句尾）</b><br><span class="de">Ich <b>habe</b> ein Buch <b>gelesen</b>.</span></div></div>
+    <div class="card"><div class="t">第二分词构成</div><ul>
+      <li>弱变化：<code>ge- + 词干 + -(e)t</code> → gemacht, gelernt, gearbeitet</li>
+      <li>强变化：<code>ge- + 换音词干 + -en</code> → gegangen, geschrieben, getrunken</li>
+      <li>不可分前缀<b>不加 ge-</b>：verstanden, bekommen, erklärt</li></ul></div>
+    <div class="card"><div class="t">用 sein 的情况</div><ul>
+      <li><b>位移</b>：gehen, kommen, fahren, fliegen</li>
+      <li><b>状态变化</b>：werden, einschlafen, aufstehen, sterben</li>
+      <li>sein 与 bleiben 自身</li></ul></div>
+    <div class="card"><div class="t">用 haben 的情况</div><div class="d">除上述之外<b>全部</b>，含所有及物动词与情态动词：<span class="de">Ich habe das gewusst.</span></div></div>
+  </div>
+
+  <h3>7.6 将来时 / 过去时 / 命令式</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>时态/语式</th><th>构成</th><th>例句</th></tr></thead>
+    <tbody>
+      <tr><td><b>将来时 Futur I</b></td><td class="de">werden（变位）+ 原形（句尾）</td><td class="de">Ich <b>werde</b> morgen nach Berlin <b>fahren</b>.</td></tr>
+      <tr><td><b>过去时 Präteritum</b></td><td class="de">弱变化 = 词干 + -te；强变化换词干</td><td class="de">ich <b>machte</b>；ich <b>ging</b>（gehen）；er <b>war</b></td></tr>
+      <tr><td><b>命令式 du</b></td><td class="de">词干（可加 -e）；换音词干不加变音</td><td class="de"><b>Komm</b> her! <b>Fahr</b> langsam!（不是 *Fähr）</td></tr>
+      <tr><td><b>命令式 ihr</b></td><td class="de">现在时 ihr 形（去 ihr）</td><td class="de"><b>Kommt</b> her! <b>Lest</b> das Buch!</td></tr>
+      <tr><td><b>命令式 Sie（敬称）</b></td><td class="de">原形 + Sie</td><td class="de"><b>Kommen Sie</b> bitte herein!</td></tr>
+      <tr><td><b>命令式 sein</b></td><td class="de">特殊形式</td><td class="de"><b>Sei</b> ruhig! / <b>Seid</b> ruhig! / <b>Seien Sie</b> ruhig!</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>7.7 可分动词（Trennbare Verben）</h3>
+  <div class="grid g2">
+    <div class="card"><div class="t">主句中前缀分离到句尾</div><div class="d"><span class="de">aufstehen → Ich <b>stehe</b> um 7 Uhr <b>auf</b>.</span><br><span class="de">einkaufen → Er <b>kauft</b> im Supermarkt <b>ein</b>.</span></div></div>
+    <div class="card"><div class="t">常见可分前缀</div><div class="d"><span class="de">an- ankommen, auf- aufstehen, aus- ausgehen, ein- einkaufen, mit- mitkommen, zu- zumachen, vor- vorbereiten, fern- fernsehen</span></div></div>
+    <div class="card"><div class="t">第二分词：ge 插在中间</div><div class="d"><span class="de">auf<b>ge</b>standen, ein<b>ge</b>kauft, an<b>ge</b>kommen</span></div></div>
+    <div class="card"><div class="t">不可分前缀（永不分家）</div><div class="d"><span class="de">be-, ge-, er-, ver-, zer-, ent-, emp-, miss-, über-, unter-</span> 等：<span class="de">verstehen, bekommen, erklären</span></div></div>
+  </div>
+  <div class="box tip">
+    <span class="lbl">实用</span>
+    德语口语中<b>将来时很少用</b>——带时间副词时直接用现在时：<span class="de">Ich <b>fahre</b> morgen nach Berlin.</span> 比 werde fahren 更自然。
+    同理，完成时才是口语真正的过去时，Präteritum 主要用于书面叙事与 sein/haben/情态动词。
+  </div>
+</section>
+
+<!-- ============ 08 介词 ============ -->
+<section id="s8">
+  <h2><span class="idx">08</span>介词支配的格</h2>
+  <p class="sub">介词决定了后面名词的格，进而决定冠词与形容词词尾。分四类记忆。</p>
+
+  <div class="grid g2">
+    <div class="card"><div class="t">永远 + 第四格 Akkusativ</div><div class="d">
+      <span class="de">für, gegen, ohne, um, durch, bis, entlang, pro</span>
+      <div class="ex"><span class="de">Das Geschenk ist <b>für</b> mein<b>en</b> Bruder.</span></div></div></div>
+    <div class="card"><div class="t">永远 + 第三格 Dativ</div><div class="d">
+      <span class="de">mit, nach, bei, von, zu, aus, seit, außer, gegenüber, gemäß</span>
+      <div class="ex"><span class="de">Ich fahre <b>mit</b> mein<b>em</b> Auto.</span></div></div></div>
+    <div class="card"><div class="t">永远 + 第二格 Genitiv（书面）</div><div class="d">
+      <span class="de">wegen, trotz, während, statt / anstatt, innerhalb, außerhalb</span>
+      <div class="ex"><span class="de"><b>Wegen</b> de<b>s</b> Wetters bleiben wir zu Hause.</span></div></div></div>
+    <div class="card"><div class="t">静三动四（Wechselpräpositionen）</div><div class="d">
+      <span class="de">in, an, auf, unter, über, vor, hinter, neben, zwischen</span>
+      <div class="ex"><span class="de">Das Buch liegt <b>auf</b> dem Tisch.（位置 → 第三格）</span></div>
+      <div class="ex"><span class="de">Ich lege das Buch <b>auf</b> den Tisch.（方向 → 第四格）</span></div></div></div>
+  </div>
+
+  <div class="box warn">
+    <span class="lbl">静三动四的判断</span>
+    问自己：<b>wo?</b>（在哪里 = 已有位置）→ 第三格；<b>wohin?</b>（往哪里 = 有位移/方向）→ 第四格。
+    <span class="de">in</span> 是最典型的一个：<span class="de">Ich bin <b>im</b> (= in dem) Büro.</span> vs. <span class="de">Ich gehe <b>ins</b> (= in das) Büro.</span>
+    常见缩合：<span class="de">in+dem=im, in+das=ins, an+dem=am, an+das=ans, bei+dem=beim, zu+der=zur, zu+dem=zum, von+dem=vom</span>。
+  </div>
+</section>
+
+<!-- ============ 09 语序 ============ -->
+<section id="s9">
+  <h2><span class="idx">09</span>语序规则</h2>
+
+  <div class="grid g3">
+    <div class="card"><div class="t">① 动词第二位（V2）</div><div class="d">陈述句中变位动词<b>永远占第 2 位</b>；句首可以是主语、时间、地点等，动词仍在第 2 位，主语让位到动词后。
+      <div class="ex"><span class="de"><u>Morgen</u> <b>fahre</b> ich nach Berlin.</span></div></div></div>
+    <div class="card"><div class="t">② 疑问句</div><div class="d">W-词占第 1 位，动词第 2 位；是非疑问句动词直接置首。
+      <div class="ex"><span class="de"><b>Kommst</b> du morgen?</span></div></div></div>
+    <div class="card"><div class="t">③ 从句动词末位</div><div class="d">由 <span class="de">weil, dass, wenn, ob, obwohl</span> 引导的从句中，变位动词被挤到<b>从句末尾</b>。
+      <div class="ex"><span class="de">Ich lerne Deutsch, <b>weil</b> ich in Deutschland arbeiten <b>möchte</b>.</span></div></div></div>
+  </div>
+
+  <h3>9.1 状语顺序 TE-KA-MO-LO</h3>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>缩写</th><th>含义</th><th>德文提问</th><th>位置</th></tr></thead>
+    <tbody>
+      <tr><td><b>TE</b></td><td>时间 Temporal</td><td class="de">wann?</td><td>最靠前</td></tr>
+      <tr><td><b>KA</b></td><td>原因 Kausal</td><td class="de">warum?</td><td>次之</td></tr>
+      <tr><td><b>MO</b></td><td>方式 Modal</td><td class="de">wie?</td><td>再次</td></tr>
+      <tr><td><b>LO</b></td><td>地点 Lokal</td><td class="de">wo?</td><td>靠近句尾（宾语之前）</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="ex"><span class="de">Ich fahre <u>morgen</u>(TE) <u>wegen des Wetters</u>(KA) <u>mit dem Zug</u>(MO) <u>nach Berlin</u>(LO).</span></div>
+  <p class="sub">注意：<b>否定词 nicht 的位置</b>决定否定范围——<span class="de">Ich <b>komme nicht</b> heute.</span>（我今天不来）vs. <span class="de">Ich komme heute <b>nicht</b> nach Berlin.</span>（不去柏林）。nicht 总在被否定成分之前。</p>
+</section>
+
+<!-- ============ 10 动词表 ============ -->
+<section id="s10">
+  <h2><span class="idx">10</span>高频不规则动词三形表</h2>
+  <p class="sub">背诵方式：原形 → 过去时（ich/er 形）→ 第二分词。三形一体记，完成时与过去时同时拿下。</p>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>原形</th><th>释义</th><th>现在时 er（换音）</th><th>过去时</th><th>第二分词</th><th>助动词</th></tr></thead>
+    <tbody>
+      <tr><td class="de">sein</td><td>是</td><td class="de">ist</td><td class="de">war</td><td class="de">gewesen</td><td class="de">ist</td></tr>
+      <tr><td class="de">haben</td><td>有</td><td class="de">hat</td><td class="de">hatte</td><td class="de">gehabt</td><td class="de">hat</td></tr>
+      <tr><td class="de">werden</td><td>成为</td><td class="de">wird</td><td class="de">wurde</td><td class="de">geworden</td><td class="de">ist</td></tr>
+      <tr><td class="de">gehen</td><td>走</td><td class="de">geht</td><td class="de">ging</td><td class="de">gegangen</td><td class="de">ist</td></tr>
+      <tr><td class="de">kommen</td><td>来</td><td class="de">kommt</td><td class="de">kam</td><td class="de">gekommen</td><td class="de">ist</td></tr>
+      <tr><td class="de">fahren</td><td>乘车去</td><td class="de">fährt</td><td class="de">fuhr</td><td class="de">gefahren</td><td class="de">ist</td></tr>
+      <tr><td class="de">sehen</td><td>看</td><td class="de">sieht</td><td class="de">sah</td><td class="de">gesehen</td><td class="de">hat</td></tr>
+      <tr><td class="de">lesen</td><td>读</td><td class="de">liest</td><td class="de">las</td><td class="de">gelesen</td><td class="de">hat</td></tr>
+      <tr><td class="de">essen</td><td>吃</td><td class="de">isst</td><td class="de">aß</td><td class="de">gegessen</td><td class="de">hat</td></tr>
+      <tr><td class="de">trinken</td><td>喝</td><td class="de">trinkt</td><td class="de">trank</td><td class="de">getrunken</td><td class="de">hat</td></tr>
+      <tr><td class="de">geben</td><td>给</td><td class="de">gibt</td><td class="de">gab</td><td class="de">gegeben</td><td class="de">hat</td></tr>
+      <tr><td class="de">nehmen</td><td>拿</td><td class="de">nimmt</td><td class="de">nahm</td><td class="de">genommen</td><td class="de">hat</td></tr>
+      <tr><td class="de">sprechen</td><td>说</td><td class="de">spricht</td><td class="de">sprach</td><td class="de">gesprochen</td><td class="de">hat</td></tr>
+      <tr><td class="de">schreiben</td><td>写</td><td class="de">schreibt</td><td class="de">schrieb</td><td class="de">geschrieben</td><td class="de">hat</td></tr>
+      <tr><td class="de">schlafen</td><td>睡觉</td><td class="de">schläft</td><td class="de">schlief</td><td class="de">geschlafen</td><td class="de">hat</td></tr>
+      <tr><td class="de">laufen</td><td>跑</td><td class="de">läuft</td><td class="de">lief</td><td class="de">gelaufen</td><td class="de">ist</td></tr>
+      <tr><td class="de">finden</td><td>找到</td><td class="de">findet</td><td class="de">fand</td><td class="de">gefunden</td><td class="de">hat</td></tr>
+      <tr><td class="de">wissen</td><td>知道</td><td class="de">weiß</td><td class="de">wusste</td><td class="de">gewusst</td><td class="de">hat</td></tr>
+      <tr><td class="de">kennen</td><td>认识</td><td class="de">kennt</td><td class="de">kannte</td><td class="de">gekannt</td><td class="de">hat</td></tr>
+      <tr><td class="de">denken</td><td>想</td><td class="de">denkt</td><td class="de">dachte</td><td class="de">gedacht</td><td class="de">hat</td></tr>
+      <tr><td class="de">stehen</td><td>站</td><td class="de">steht</td><td class="de">stand</td><td class="de">gestanden</td><td class="de">hat/ist</td></tr>
+      <tr><td class="de">bleiben</td><td>停留</td><td class="de">bleibt</td><td class="de">blieb</td><td class="de">geblieben</td><td class="de">ist</td></tr>
+      <tr><td class="de">beginnen</td><td>开始</td><td class="de">beginnt</td><td class="de">begann</td><td class="de">begonnen</td><td class="de">hat</td></tr>
+      <tr><td class="de">helfen</td><td>帮助（+D）</td><td class="de">hilft</td><td class="de">half</td><td class="de">geholfen</td><td class="de">hat</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box mem">
+    <span class="lbl">学习顺序建议</span>
+    ① 字母与发音（1–2 天）→ ② 冠词四格表 + 名词三件套背诵（贯穿全程）→ ③ W-疑问词 + V2 语序 →
+    ④ 现在时 + sein/haben/werden → ⑤ 完成时与情态动词 → ⑥ 形容词词尾（放到最后，因为它依赖前面全部知识）。
+  </div>
+</section>
+
+<footer>
+  德语初学者核心知识手册 · 内容依据 DW（Deutsche Welle）发音教程、Wiktionary 德语复数条目与通行德语语法体系整理
+</footer>
+
+</div>
+</body>
+</html>
